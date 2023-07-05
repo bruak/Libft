@@ -1,5 +1,3 @@
-// karakter dizisini doğrudan değiştirir.
-// İşlem, karakterin ve indeksin işaret edildiği bir fonksiyon aracılığıyla yapılır.
 #include "libft.h"
 void    ft_striteri(char *s, void (*f)(unsigned int, char *))
 {

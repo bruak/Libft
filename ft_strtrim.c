@@ -25,7 +25,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	start = 0;
 	end = ft_strlen(s1);
 	while (s1[start] && ft_checkset(s1[start], set)) 
-    //set içindeki whitespace karakterlerini s1[start] den başlayarak kontrol eder.
     //whitespace karakterleri bulunca start değerini 1 arttırır.
     //whitespace karakterleri bulunmazsa start başlangıç değeri değişir.
 		start++;
@@ -48,19 +47,19 @@ char	*ft_strtrim(char const *s1, char const *set)
 }
 
 
-// int main()
-// {
-//     char *str = "   Hello, world!   ";
-//     char *set = " ";
-//     char *trimmed_str = ft_strtrim(str, set);
+int main()
+{
+    char *str = "   Hello, world!   ";
+    char *set = " ";
+    char *trimmed_str = ft_strtrim(str, set);
 
-//     printf("Original string: \"%s\"\n", str);
-//     printf("Trimmed string: \"%s\"\n", trimmed_str);
+    printf("Original string: \"%s\"\n", str);
+    printf("Trimmed string: \"%s\"\n", trimmed_str);
 
-//     free(trimmed_str); // Bellek sızıntısını önlemek için hafızayı serbest bırak
+    free(trimmed_str); // Bellek sızıntısını önlemek için hafızayı serbest bırak
 
-//     return 0;
-// }
+    return 0;
+}
 
 /*#include "libft.h"
 // libft.h başlık dosyası dahil edildi.

@@ -1,8 +1,5 @@
 
-
 #include "libft.h"
-
-
 
 char	*ft_strnstr(const char *str, const char *needle, size_t len)
 {
