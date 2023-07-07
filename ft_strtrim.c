@@ -47,19 +47,19 @@ char	*ft_strtrim(char const *s1, char const *set)
 }
 
 
-int main()
-{
-    char *str = "   Hello, world!   ";
-    char *set = " ";
-    char *trimmed_str = ft_strtrim(str, set);
+// int main()
+// {
+//     char *str = "   Hello, world!   ";
+//     char *set = " ";
+//     char *trimmed_str = ft_strtrim(str, set);
 
-    printf("Original string: \"%s\"\n", str);
-    printf("Trimmed string: \"%s\"\n", trimmed_str);
+//     printf("Original string: \"%s\"\n", str);
+//     printf("Trimmed string: \"%s\"\n", trimmed_str);
 
-    free(trimmed_str); // Bellek sızıntısını önlemek için hafızayı serbest bırak
+//     free(trimmed_str); // Bellek sızıntısını önlemek için hafızayı serbest bırak
 
-    return 0;
-}
+//     return 0;
+// }
 
 /*#include "libft.h"
 // libft.h başlık dosyası dahil edildi.

@@ -1,8 +1,8 @@
 
 int	ft_atoi(const char *str)
 {
-	long int	num;
-	int			sing;
+	long int num;
+	int sing;
 
 	sing = 1;
 	num = 0;
@@ -15,7 +15,7 @@ int	ft_atoi(const char *str)
 		str++;
 	}
 	while (*str != 0 && *str >= '0' && *str <= '9')
-	{ 
+	{
 		num = num * 10 + (*str - '0') * sing;
 		if (num > 2147483647)
 			return (-1);
