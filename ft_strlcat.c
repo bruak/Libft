@@ -1,7 +1,18 @@
-#include "libft.h"
-// gönderilen iiki diziyi birleştirir. (gönderilen 1. dizinin sonuna ekleme yaparak.)(sonuna ekleme yaparak)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bsoykan <bsoykan@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/09 14:37:02 by bsoykan           #+#    #+#             */
+/*   Updated: 2023/07/09 14:37:03 by bsoykan          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 
 #include "libft.h"
+
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {

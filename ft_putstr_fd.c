@@ -1,5 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bsoykan <bsoykan@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/09 14:38:43 by bsoykan           #+#    #+#             */
+/*   Updated: 2023/07/09 14:38:44 by bsoykan          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
 #include "libft.h"
-// belirtilen bir karakter dizisini (s) bir dosya tanıtıcısına (fd) yazan bir yardımcı işlevdir.
+
 void	ft_putstr_fd(char *s, int fd)
 {
 	if (!s)

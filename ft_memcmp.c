@@ -1,5 +1,16 @@
-//ft_memcmp fonksiyonu, bellekteki iki bellek bloğunu (s1 ve s2) n kadar byte boyunca karşılaştırır.
-// Karşılaştırma, bellek bloklarının değerlerini byte-byte kontrol eder ve ilk farklı byte'ı bulur.
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bsoykan <bsoykan@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/09 14:36:23 by bsoykan           #+#    #+#             */
+/*   Updated: 2023/07/09 14:36:24 by bsoykan          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
 #include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)

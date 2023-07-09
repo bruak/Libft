@@ -1,3 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bsoykan <bsoykan@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/09 14:38:49 by bsoykan           #+#    #+#             */
+/*   Updated: 2023/07/09 14:38:50 by bsoykan          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
 #include "libft.h"
 
 static int	count_words(const char *str, char c)
@@ -35,11 +48,6 @@ static char	*word_dup(const char *str, int start, int finish)
 }
 
 char		**ft_split(char const *s, char c)
-// Bu durumda, split bir karakter dizisi diziye işaret eden bir işaretçi olduğu için, 
-// split işaretçisi, bölünmüş metni içeren bir karakter dizisi diziye
-//  işaret eder. Yani, split işaretçisi, her bir elemanı bir kelimeyi temsil eden 
-//  karakter dizilerine işaret eden bir diziye işaret eder.
-
 {
 	size_t	i;
 	size_t	j;
@@ -65,5 +73,3 @@ char		**ft_split(char const *s, char c)
 	split[j] = 0;
 	return (split);
 }
-//çalıştırmak için: gcc -o a testmain.c ft_split.c ft_calloc.c ft_strlcpy.c ft_strlen.c ft_bzero.c
-//neden sıra sıra yazmak gerekir??????

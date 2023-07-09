@@ -1,9 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bsoykan <bsoykan@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/09 14:36:00 by bsoykan           #+#    #+#             */
+/*   Updated: 2023/07/09 14:36:01 by bsoykan          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
 #include "libft.h"
 
-
-// Integer to ASCII
 static int ft_numlen(int num)
-//bu fonksiyonda girilen nbr değerinin basamak sayısı alınır.
 {
     int i;
 
@@ -21,46 +31,28 @@ static int ft_numlen(int num)
 char *ft_itoa(int n)
 {
     int len;
-    char *dizi;
+    char *str;
     long nbr;
 
     nbr = n;
     len = ft_numlen(nbr);
-    // gririlen değerin basamak sayısı alınr len değerine kaydedilir
     if (n < 0)
     {
         len++;
         nbr = -nbr;
     }
-    dizi = malloc(sizeof(char) * (len + 1)); // dizi boyutunu hesaplar, basamak değeri kadar yer ayırır.
-    if (!dizi)
+    str = malloc(sizeof(char) * (len + 1));
+    if (!str)
         return (NULL);
-    dizi[len] = '\0';//en sonuna null koyar
+    str[len] = '\0';
     while (nbr > 0)
     {
-        dizi[--len] = nbr % 10 + '0'; 
-        // 123^ün mdunu alarak bölüp parçalayarak char değerine çevirir
+        str[--len] = nbr % 10 + '0'; 
         nbr /= 10;
-        // basamak kaydırıp sağdan sola doğru gder,
     }
     if (n < 0)
-        dizi[0] = '-';
+        str[0] = '-';
     else if (n == 0)
-        dizi[0] = '0';
-    return (dizi);
+        str[0] = '0';
+    return (str);
 }
-// gcc -o a .\ft_itoa.c .\testmain.c 
-/*
-int main()
-{
-    int num = 123;
-    char *str = ft_itoa(num);
-
-    printf("Number: %d\n", num);
-    printf("String: %s\n", str);
-
-    free(str);
-
-    return 0;
-}
-*/
