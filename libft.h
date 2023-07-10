@@ -6,7 +6,7 @@
 /*   By: bsoykan <bsoykan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 14:27:28 by bsoykan           #+#    #+#             */
-/*   Updated: 2023/07/10 13:16:58 by bsoykan          ###   ########.fr       */
+/*   Updated: 2023/07/10 15:34:48 by bsoykan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-int		ft_isalpha(int str);
 int		ft_isdigit(int str);
+int		ft_isalpha(int str);
+int		ft_isascii(int c);
 int		ft_isalnum(int str);
 int		ft_isprint(int str);
 int		ft_toupper(int c);
@@ -38,7 +39,7 @@ void	ft_putnbr_fd(int n, int fd);
 size_t	ft_strlen(const char *str);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
-char	*strchr(const char *str, int c);
+char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *str, const char *needle, size_t len);
 char	*ft_strdup(const char *str);

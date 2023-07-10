@@ -6,7 +6,7 @@
 /*   By: bsoykan <bsoykan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 14:38:55 by bsoykan           #+#    #+#             */
-/*   Updated: 2023/07/10 13:13:51 by bsoykan          ###   ########.fr       */
+/*   Updated: 2023/07/10 15:45:29 by bsoykan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,15 @@ char	*ft_strchr(const char *str, int c)
 	int	i;
 
 	i = 0;
+	if (!str[0] && !c)
+		return ((char *) str);
 	while (str[i])
 	{
-		if (str[i] == c)
-			return ((char *)(str + i));
+		if (str[i] == (unsigned char) c)
+			return ((char *) str + i);
 		i++;
 	}
-	if (c)
+	if ((unsigned char) c)
 		return (NULL);
-	return ((char *)(str + i));
+	return ((char *) str + i);
 }
