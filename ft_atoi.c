@@ -6,9 +6,11 @@
 /*   By: bsoykan <bsoykan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 14:31:08 by bsoykan           #+#    #+#             */
-/*   Updated: 2023/07/10 15:25:11 by bsoykan          ###   ########.fr       */
+/*   Updated: 2023/07/10 16:32:30 by bsoykan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
