@@ -6,13 +6,13 @@
 /*   By: bsoykan <bsoykan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 14:34:32 by bsoykan           #+#    #+#             */
-/*   Updated: 2023/07/09 14:37:52 by bsoykan          ###   ########.fr       */
+/*   Updated: 2023/07/10 13:14:08 by bsoykan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
-int ft_isascii(int c)
+
+int	ft_isascii(int c)
 {
-    return (c >= 0 && c <= 127);
+	return (c >= 0 && c <= 127);
 }

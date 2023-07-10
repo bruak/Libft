@@ -6,14 +6,13 @@
 /*   By: bsoykan <bsoykan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 14:38:21 by bsoykan           #+#    #+#             */
-/*   Updated: 2023/07/09 14:38:21 by bsoykan          ###   ########.fr       */
+/*   Updated: 2023/07/10 13:13:48 by bsoykan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {
-	write(fd, &c, 1);
+	write (fd, &c, 1);
 }

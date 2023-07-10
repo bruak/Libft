@@ -56,5 +56,3 @@ fclean: clean
 	rm -f $(NAME)
 
 re:fclean $(NAME)
-
-.PHONY: clean fclean all re bonus norm

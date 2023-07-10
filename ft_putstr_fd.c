@@ -6,10 +6,9 @@
 /*   By: bsoykan <bsoykan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 14:38:43 by bsoykan           #+#    #+#             */
-/*   Updated: 2023/07/09 14:38:44 by bsoykan          ###   ########.fr       */
+/*   Updated: 2023/07/10 13:13:50 by bsoykan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "libft.h"
 
@@ -17,5 +16,5 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	if (!s)
 		return ;
-	write(fd, s, ft_strlen(s));
+	write (fd, s, ft_strlen(s));
 }

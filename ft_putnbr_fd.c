@@ -6,12 +6,12 @@
 /*   By: bsoykan <bsoykan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 14:38:33 by bsoykan           #+#    #+#             */
-/*   Updated: 2023/07/09 14:38:34 by bsoykan          ###   ########.fr       */
+/*   Updated: 2023/07/10 13:13:50 by bsoykan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
+
 void	ft_putnbr_fd(int nb, int fd)
 {
 	if (nb < 0)

@@ -6,10 +6,9 @@
 /*   By: bsoykan <bsoykan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 14:39:22 by bsoykan           #+#    #+#             */
-/*   Updated: 2023/07/09 14:39:22 by bsoykan          ###   ########.fr       */
+/*   Updated: 2023/07/10 13:16:12 by bsoykan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "libft.h"
 
@@ -37,7 +36,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	start = 0;
 	end = ft_strlen(s1);
-	while (s1[start] && ft_checkset(s1[start], set)) 
+	while (s1[start] && ft_checkset(s1[start], set))
 		start++;
 	while (end > start && ft_checkset(s1[end - 1], set))
 		end--;

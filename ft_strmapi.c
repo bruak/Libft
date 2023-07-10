@@ -6,10 +6,9 @@
 /*   By: bsoykan <bsoykan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 14:37:22 by bsoykan           #+#    #+#             */
-/*   Updated: 2023/07/09 14:37:23 by bsoykan          ###   ########.fr       */
+/*   Updated: 2023/07/10 13:15:45 by bsoykan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "libft.h"
 
@@ -21,7 +20,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (!s || !f)
 		return (NULL);
 	i = 0;
-	str = (char *) ft_calloc(ft_strlen(s) + 1, sizeof(char));
+	str = (char *)ft_calloc(ft_strlen(s) + 1, sizeof(char));
 	if (!str)
 		return (NULL);
 	while (s[i])

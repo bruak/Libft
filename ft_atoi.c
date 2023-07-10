@@ -6,29 +6,28 @@
 /*   By: bsoykan <bsoykan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 14:31:08 by bsoykan           #+#    #+#             */
-/*   Updated: 2023/07/09 14:31:09 by bsoykan          ###   ########.fr       */
+/*   Updated: 2023/07/10 15:25:11 by bsoykan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 int	ft_atoi(const char *str)
 {
-	long int num;
-	int sing;
+	int			sng;
+	long int	num;
 
-	sing = 1;
+	sng = 1;
 	num = 0;
 	while ((*str >= 9 && *str <= 13) || (*str == 32))
 		str++;
 	if (*str == '-' || *str == '+')
 	{
 		if (*str == '-')
-			sing = -1;
+			sng = -1;
 		str++;
 	}
 	while (*str != 0 && *str >= '0' && *str <= '9')
 	{
-		num = num * 10 + (*str - '0') * sing;
+		num = num * 10 + (*str - '0') * sng;
 		if (num > 2147483647)
 			return (-1);
 		if (num < -2147483648)

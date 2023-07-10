@@ -6,70 +6,55 @@
 /*   By: bsoykan <bsoykan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 14:38:49 by bsoykan           #+#    #+#             */
-/*   Updated: 2023/07/09 14:38:50 by bsoykan          ###   ########.fr       */
+/*   Updated: 2023/07/10 14:57:10 by bsoykan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-static int	count_words(const char *str, char c)
+unsigned int	wordcounter(const char *s, char delimiter)
 {
-	int i;
-	int trigger;
+	unsigned int	word;
 
-	i = 0;
-	trigger = 0;
-	while (*str)
+	word = 0;
+	while (*s)
 	{
-		if (*str != c && trigger == 0)
+		if (*s == delimiter)
+			s++;
+		else
 		{
-			trigger = 1;
-			i++;
+			while (*s != delimiter && *s)
+				s++;
+			word++;
 		}
-		else if (*str == c)
-			trigger = 0;
-		str++;
 	}
-	return (i);
-}
-
-static char	*word_dup(const char *str, int start, int finish)
-{
-	char	*word;
-	int		i;
-
-	i = 0;
-	word = malloc((finish - start + 1) * sizeof(char));
-	while (start < finish)
-		word[i++] = str[start++];
-	word[i] = '\0';
 	return (word);
 }
 
-char		**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	size_t	i;
-	size_t	j;
-	int		index;
-	char	**split;
+	char			**arr;
+	unsigned int	j;
+	unsigned int	a;
 
-	if (!s || !(split = malloc((count_words(s, c) + 1) * sizeof(char *))))
-		return (0);
-	i = 0;
-	j = 0;
-	index = -1;
-	while (i <= ft_strlen(s))
+	if (!s)
+		return (NULL);
+	arr = (char **) ft_calloc(wordcounter(s, c) + 1, sizeof(char *));
+	if (!arr)
+		return (NULL);
+	a = 0;
+	while (*s)
 	{
-		if (s[i] != c && index < 0)
-			index = i;
-		else if ((s[i] == c || i == ft_strlen(s)) && index >= 0)
+		if (*s == c)
+			s++;
+		else
 		{
-			split[j++] = word_dup(s, index, i);
-			index = -1;
+			j = 0;
+			while (*s != c && *s && ++j)
+				s++;
+			arr[++a -1] = (char *) ft_calloc(j + 1, sizeof(char));
+			ft_strlcpy(arr[a -1], s - j, j + 1);
 		}
-		i++;
 	}
-	split[j] = 0;
-	return (split);
+	return (arr);
 }

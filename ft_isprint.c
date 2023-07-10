@@ -6,14 +6,13 @@
 /*   By: bsoykan <bsoykan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 14:34:56 by bsoykan           #+#    #+#             */
-/*   Updated: 2023/07/09 14:37:45 by bsoykan          ###   ########.fr       */
+/*   Updated: 2023/07/10 13:14:50 by bsoykan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    return (c >= 32 && c <= 126);
+	return (c >= 32 && c <= 126);
 }
