@@ -1,8 +1,7 @@
 # LIBFT
-* First library
 
 ## WHAT A LOOK LİKE THE UNIT TEST
- Ekran Görüntüleri
+
 
 ![ss](https://snipboard.io/BkIR72.jpg)
  
